@@ -18,13 +18,13 @@
 
             var renderer = new THREE.WebGLRenderer();
             renderer.setSize(window.innerWidth, window.innerHeight);
-            renderer.autoClear = true;
+            // renderer.autoClear = true;
 
             document.body.appendChild( renderer.domElement );
 
             var cube = new THREE.Mesh(
-                new THREE.CubeGeometry(100, 100, 100),
-                new THREE.Material({opacity: 0.0})
+                new THREE.BoxGeometry(100, 100, 100),
+                new THREE.MeshBasicMaterial({visible: false})
             );
             scene.add(cube);
 
